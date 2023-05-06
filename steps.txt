@@ -1,0 +1,7 @@
+#Note will only work in linux
+1- sudo apt-get install flex
+2- sudo apt-get install byacc & bison
+3- lex ast.l
+4- yacc -d ast.y  # if we run command bison -d ast.y the y.tab.c file will not generate.
+5- gcc lex.yy.c y.tab.c 
+6- ./a.out < input.cpp
